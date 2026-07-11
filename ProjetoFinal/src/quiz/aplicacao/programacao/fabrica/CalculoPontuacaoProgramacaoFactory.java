@@ -1,0 +1,18 @@
+package quiz.aplicacao.programacao.fabrica;
+
+import quiz.aplicacao.programacao.jogo.CalculoPontuacaoProgramacaoStrategy;
+import quiz.framework.scorecalculation.StrategyScoreCalculation;
+import quiz.framework.factory.ScoreCalculationFactory;
+
+/**
+ * Classe concreta responsável por definir a lógica de pontuação para o Quiz sobre programação.
+ * @author Matheus Vieira de Assis
+ */
+
+public class CalculoPontuacaoProgramacaoFactory implements ScoreCalculationFactory {
+
+    @Override
+    public StrategyScoreCalculation create() {
+        return new CalculoPontuacaoProgramacaoStrategy();
+    }
+}
